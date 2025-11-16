@@ -1,0 +1,60 @@
+# Archivos de Git
+.git
+.gitignore
+.gitattributes
+
+# Archivos de documentación
+README.md
+*.md
+
+# Archivos de configuración local
+.env
+.env.local
+.env.development
+.env.production
+
+# Directorios de build y output
+**/bin/
+**/obj/
+**/out/
+**/publish/
+
+# Archivos temporales y de caché
+**/.vs/
+**/.vscode/
+**/.idea/
+**/.suo
+**/.user
+**/.userosscache
+**/.sln.docstates
+
+# Archivos de NuGet
+**/packages/
+**/*.nupkg
+**/*.snupkg
+
+# Archivos de test
+**/TestResults/
+**/*.trx
+**/*.coverage
+**/*.coveragexml
+
+# Logs
+**/logs/
+**/*.log
+
+# Runtime data
+**/pids
+**/*.pid
+**/*.seed
+**/*.pid.lock
+
+# Dependency directories
+**/node_modules/
+
+# Optional npm cache directory
+**/.npm
+
+# Temporal folders
+**/tmp/
+**/temp/

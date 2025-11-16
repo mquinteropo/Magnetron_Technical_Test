@@ -1,0 +1,6 @@
+@MagnetronTecnicalTest_HostAddress = http://localhost:5245
+
+GET {{MagnetronTecnicalTest_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

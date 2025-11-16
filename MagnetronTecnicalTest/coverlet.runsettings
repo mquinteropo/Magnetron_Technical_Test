@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<RunSettings>
+  <DataCollectionRunSettings>
+    <DataCollectors>
+      <DataCollector friendlyName="XPlat code coverage">
+        <Configuration>
+          <!-- Formatos de salida -->
+          <Format>opencover,cobertura,json,lcov</Format>
+          
+          <!-- Archivos y directorios a incluir -->
+          <Include>[MagnetronTecnicalTest]*</Include>
+          
+          <!-- Archivos y directorios a excluir -->
+          <Exclude>[*.Tests]*,[*.TestResults]*,[*]Program,[*]*.WeatherForecast*</Exclude>
+          
+          <!-- Archivos específicos a excluir -->
+          <ExcludeByFile>**/Program.cs,**/WeatherForecast.cs</ExcludeByFile>
+          
+          <!-- Atributos a excluir -->
+          <ExcludeByAttribute>Obsolete,GeneratedCodeAttribute,CompilerGeneratedAttribute</ExcludeByAttribute>
+          
+          <!-- Usar SourceLink -->
+          <UseSourceLink>true</UseSourceLink>
+          
+          <!-- Instrumentar en lugar de usar SourceLink -->
+          <Instrument>true</Instrument>
+          
+          <!-- Determinar cómo manejar archivos no instrumentados -->
+          <SingleHit>false</SingleHit>
+          
+          <!-- Incluir directorios de prueba en el reporte -->
+          <IncludeTestAssembly>false</IncludeTestAssembly>
+        </Configuration>
+      </DataCollector>
+    </DataCollectors>
+  </DataCollectionRunSettings>
+</RunSettings>

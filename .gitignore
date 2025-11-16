@@ -1,0 +1,57 @@
+# Git ignore for .NET / VS / Windows
+
+# Build outputs
+bin/
+obj/
+out/
+publish/
+
+# Visual Studio
+.vs/
+*.user
+*.rsuser
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Rider / IDE
+.idea/
+*.sln.iml
+
+# Logs
+*.log
+Logs/
+log/
+logs/
+
+# Tests and coverage
+TestResults/
+*.trx
+*.coverage
+*.coveragexml
+.coverage/
+coverage/
+CoverageReport/
+
+# NuGet
+*.nupkg
+packages/
+.nuget/
+
+# .NET Artifacts
+project.lock.json
+artifacts/
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Docker (override files typically local-only)
+docker-compose.override.yml
+
+# Tools
+BenchmarkDotNet.Artifacts/
+ReSharperReports/
+
+# Env files: keep .env tracked as requested (do NOT ignore it)
+# .env

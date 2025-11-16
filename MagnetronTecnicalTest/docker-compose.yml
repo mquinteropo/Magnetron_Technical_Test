@@ -1,0 +1,26 @@
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: magnetron-api
+    environment:
+      # PostgreSQL connection to host machine
+      POSTGRES_HOST: host.docker.internal
+      POSTGRES_PORT: 5432
+      POSTGRES_DB: billing_db
+      POSTGRES_USER: app
+      POSTGRES_PASSWORD: app_pwd
+
+      # JWT configuration
+      JWT_SECRET: "YourSuperSecretKeyForJWTTokenGenerationThatShouldBeLongEnoughAndSecure123!"
+      JWT_ISSUER: magnetron.billing.api
+      JWT_AUDIENCE: magnetron.billing.clients
+      JWT_EXP_MINUTES: 60
+
+      # ASP.NET Core
+      ASPNETCORE_ENVIRONMENT: Production
+      ASPNETCORE_URLS: http://+:8080
+    ports:
+      - "8080:8080"
+    restart: unless-stopped
